@@ -6,8 +6,11 @@ export const debugProgressbar = () => {
     {
       action: 'progress',
       data: {
-        label: 'Using Lockpick',
-        duration: 8000,
+        label: 'Making drugs!',
+        duration: 15000,
+        icon: 'tablets',
+        color: '#169ac9',
+
       },
     },
   ]);
