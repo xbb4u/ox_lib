@@ -1,8 +1,8 @@
-type Position = {
+interface Position {
   x: number;
   y: number;
   z: number;
-};
+}
 
 interface PropProps {
   model: string;
@@ -44,6 +44,8 @@ interface ProgressProps {
 
 interface ProgressbarProps extends Omit<ProgressProps, 'position'> {
   label: string;
+  icon?: string; // Add icon property
+  color?: string; // Add color property
 }
 
 export const progressBar = async (data: ProgressbarProps): Promise<boolean> => exports.ox_lib.progressBar(data);
