@@ -8,9 +8,6 @@ export const debugProgressbar = () => {
       data: {
         label: 'Making drugs!',
         duration: 15000,
-        icon: 'tablets',
-        color: '#169ac9',
-
       },
     },
   ]);
