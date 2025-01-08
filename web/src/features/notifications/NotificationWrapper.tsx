@@ -10,12 +10,12 @@ import LibIcon from '../../components/LibIcon';
 
 const useStyles = createStyles((theme) => ({
   container: {
-    width: 'fit-content',
+    width: 300,
     height: 'fit-content',
-    maxWidth: 440,
-    backgroundColor: theme.colors.dark[6],
-    color: '#ffffff',
-    padding: 8,
+    backgroundColor: theme.colors.black2[5],
+    color: theme.colors.dark[0],
+    padding: 12,
+    border: `1px solid ${theme.colors.grey[9]}`,
     borderRadius: theme.radius.sm,
     fontFamily: 'Roboto',
     boxShadow: theme.shadows.sm,
@@ -23,19 +23,16 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontWeight: 500,
     lineHeight: 'normal',
-    fontSize: 15.5,
   },
   description: {
-    fontSize: 14.5,
-    fontWeight: 500,
-    color: '#ee8a08',
+    fontSize: 12,
+    color: theme.colors.white[5],
     fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
   descriptionOnly: {
-    fontSize: 15.5,
-    fontWeight: 500,
-    color: '#ffffff',
+    fontSize: 14,
+    color: theme.colors.white[5],
     fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
@@ -110,19 +107,13 @@ const Notifications: React.FC = () => {
     if (!data.icon) {
       switch (data.type) {
         case 'error':
-          data.icon = 'hexagon-xmark';
+          data.icon = 'circle-xmark';
           break;
         case 'success':
-          data.icon = 'shield-check';
+          data.icon = 'circle-check';
           break;
-        case 'warn':
-          data.icon = 'diamond-exclamation';
-          break;
-        case 'ambulance':
-          data.icon = 'truck-medical';
-          break;
-        case 'police':
-          data.icon = 'user-police';
+        case 'warning':
+          data.icon = 'circle-exclamation';
           break;
         default:
           data.icon = 'circle-info';
@@ -133,16 +124,16 @@ const Notifications: React.FC = () => {
     if (!data.iconColor) {
       switch (data.type) {
         case 'error':
-          iconColor = 'red.6';
+          iconColor = 'red.5';
           break;
         case 'success':
-          iconColor = 'teal.6';
+          iconColor = 'green.5';
           break;
         case 'warning':
-          iconColor = 'yellow.6';
+          iconColor = 'orange.5';
           break;
         default:
-          iconColor = 'blue.6';
+          iconColor = 'blue.5';
           break;
       }
     } else {

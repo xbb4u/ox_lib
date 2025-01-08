@@ -24,7 +24,6 @@ if (isEnvBrowser()) {
 }
 
 const root = document.getElementById('root');
-
 createRoot(root!).render(
   <StrictMode>
     <LocaleProvider>

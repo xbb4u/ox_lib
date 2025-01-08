@@ -21,31 +21,37 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   label: {
     width: '100%',
-    color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[0],
+    color: params.disabled ? theme.colors.black[3] : theme.colors.white[5],
     whiteSpace: 'pre-wrap',
   },
   button: {
     height: 'fit-content',
+    fontWeight: 500,
     width: '100%',
     padding: 10,
+    backgroundColor: params.readOnly ? 'rgba(44, 44, 44, 0.9)' : theme.colors.black2[5],
+    border: params.readOnly ? '1px solid #C1C1C1' : `1px solid ${theme.colors.grey[9]}`,
     '&:hover': {
-      backgroundColor: params.readOnly ? theme.colors.dark[6] : undefined,
+      background: params.readOnly
+        ? 'linear-gradient(90deg, rgba(44, 44, 44, 0.9), rgba(83, 83, 83, 0.9))'
+        : `linear-gradient(to right, rgba(36,36,36,0.9), rgba(23,23,23,0.9))`,
       cursor: params.readOnly ? 'unset' : 'pointer',
     },
     '&:active': {
       transform: params.readOnly ? 'unset' : undefined,
     },
-  },
+  },  
   iconImage: {
     maxWidth: '25px',
   },
   description: {
-    color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[2],
+    color: params.disabled ? theme.colors.black[3] : theme.colors.grey[3],
     fontSize: 12,
+    fontWeight: 400,
   },
   dropdown: {
     padding: 10,
-    color: theme.colors.dark[0],
+    color: theme.colors.white[5],
     fontSize: 14,
     maxWidth: 256,
     width: 'fit-content',
