@@ -18,14 +18,12 @@ const useStyles = createStyles((theme, params: { canClose?: boolean }) => ({
     textAlign: 'center',
     justifyContent: 'center',
     padding: 2,
-    backgroundColor: theme.colors.black2[5],
-    border: `1px solid ${theme.colors.grey[9]}`,
   },
   root: {
     border: 'none',
   },
   label: {
-    color: params.canClose === false ? theme.colors.grey[7] : theme.colors.white[5],
+    color: params.canClose === false ? theme.colors.dark[2] : theme.colors.dark[0],
   },
 }));
 

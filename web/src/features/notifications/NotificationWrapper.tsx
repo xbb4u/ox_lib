@@ -12,10 +12,9 @@ const useStyles = createStyles((theme) => ({
   container: {
     width: 300,
     height: 'fit-content',
-    backgroundColor: theme.colors.black2[5],
+    backgroundColor: theme.colors.dark[6],
     color: theme.colors.dark[0],
     padding: 12,
-    border: `1px solid ${theme.colors.grey[9]}`,
     borderRadius: theme.radius.sm,
     fontFamily: 'Roboto',
     boxShadow: theme.shadows.sm,
@@ -26,13 +25,13 @@ const useStyles = createStyles((theme) => ({
   },
   description: {
     fontSize: 12,
-    color: theme.colors.white[5],
+    color: theme.colors.dark[2],
     fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
   descriptionOnly: {
     fontSize: 14,
-    color: theme.colors.white[5],
+    color: theme.colors.dark[2],
     fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
@@ -124,16 +123,16 @@ const Notifications: React.FC = () => {
     if (!data.iconColor) {
       switch (data.type) {
         case 'error':
-          iconColor = 'red.5';
+          iconColor = 'red.6';
           break;
         case 'success':
-          iconColor = 'green.5';
+          iconColor = 'teal.6';
           break;
         case 'warning':
-          iconColor = 'orange.5';
+          iconColor = 'yellow.6';
           break;
         default:
-          iconColor = 'blue.5';
+          iconColor = 'blue.6';
           break;
       }
     } else {

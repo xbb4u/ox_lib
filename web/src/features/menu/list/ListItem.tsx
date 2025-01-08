@@ -15,19 +15,13 @@ interface Props {
 
 const useStyles = createStyles((theme, params: { iconColor?: string }) => ({
   buttonContainer: {
-    backgroundColor: theme.colors.black2[5],
-    borderRadius: theme.radius.sm,
+    backgroundColor: theme.colors.dark[6],
+    borderRadius: theme.radius.md,
     padding: 2,
     height: 60,
     scrollMargin: 8,
-    border: `1px solid ${theme.colors.grey[9]}`,
-    transition: 'background 0.3s ease',
-    '&:hover': {
-      background: `linear-gradient(to right, rgba(36,36,36,0.9), rgba(23,23,23,0.9))`,
-      outline: 'none',
-    },
     '&:focus': {
-      background: `linear-gradient(to right, rgba(36,36,36,0.9), rgba(23,23,23,0.9))`,
+      backgroundColor: theme.colors.dark[4],
       outline: 'none',
     },
   },
@@ -47,20 +41,20 @@ const useStyles = createStyles((theme, params: { iconColor?: string }) => ({
   },
   icon: {
     fontSize: 24,
-    color: params.iconColor || theme.colors.white[5],
+    color: params.iconColor || theme.colors.dark[2],
   },
   label: {
-    color: theme.colors.grey[5],
+    color: theme.colors.dark[2],
     textTransform: 'uppercase',
     fontSize: 12,
     verticalAlign: 'middle',
   },
   chevronIcon: {
     fontSize: 14,
-    color: theme.colors.grey[5],
+    color: theme.colors.dark[2],
   },
   scrollIndexValue: {
-    color: theme.colors.grey[5],
+    color: theme.colors.dark[2],
     textTransform: 'uppercase',
     fontSize: 14,
   },
@@ -132,8 +126,8 @@ const ListItem = forwardRef<Array<HTMLDivElement | null>, Props>(({ item, index,
             <Text className={classes.progressLabel}>{item.label}</Text>
             <Progress
               value={item.progress}
-              color={item.colorScheme || 'black.0'}
-              styles={(theme) => ({ root: { backgroundColor: theme.colors.black[3] } })}
+              color={item.colorScheme || 'dark.0'}
+              styles={(theme) => ({ root: { backgroundColor: theme.colors.dark[3] } })}
             />
           </Stack>
         ) : (

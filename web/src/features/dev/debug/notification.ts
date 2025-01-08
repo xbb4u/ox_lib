@@ -13,9 +13,19 @@ export const debugCustomNotification = () => {
         duration: 20000,
         style: {
           '.description': {
-            color: 'white',
+            color: 'red',
           },
         },
+      },
+    },
+  ]);
+  debugData<NotificationProps>([
+    {
+      action: 'notify',
+      data: {
+        title: 'Error',
+        description: 'Notification description',
+        type: 'error',
       },
     },
   ]);
@@ -28,30 +38,6 @@ export const debugCustomNotification = () => {
         type: 'success',
         icon: 'microchip',
         showDuration: false,
-      },
-    },
-  ]);
-  debugData<NotificationProps>([
-    {
-      action: 'notify',
-      data: {
-        title: 'Warning',
-        description: 'Notification description',
-        type: 'warning',
-        id: 'omg',
-        duration: 20000,
-      },
-    },
-  ]);
-  debugData<NotificationProps>([
-    {
-      action: 'notify',
-      data: {
-        title: 'Error',
-        description: 'Notification description',
-        type: 'error',
-        id: 'omg2',
-        duration: 20000,
       },
     },
   ]);
