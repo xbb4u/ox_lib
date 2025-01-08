@@ -13,8 +13,6 @@ local createdProps = {}
 
 ---@class ProgressProps
 ---@field label? string
----@field icon? string
----@field color? string
 ---@field duration number
 ---@field position? 'middle' | 'bottom'
 ---@field useWhileDead? boolean
@@ -159,9 +157,7 @@ function lib.progressBar(data)
             action = 'progress',
             data = {
                 label = data.label,
-                duration = data.duration,
-                icon = data.icon, 
-                color = data.color 
+                duration = data.duration
             }
         })
 

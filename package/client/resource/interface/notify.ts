@@ -37,7 +37,7 @@ interface DefaultNotifyProps {
   description?: string;
   duration?: number;
   position?: NotificationPosition;
-  status?: 'info' | 'police' | 'ambulance' |'warn' | 'success' | 'error';
+  status?: 'info' | 'warning' | 'success' | 'error';
   id?: number;
 }
 
