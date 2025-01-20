@@ -10,11 +10,12 @@ import LibIcon from '../../components/LibIcon';
 
 const useStyles = createStyles((theme) => ({
   container: {
-    width: 300,
+    width: 'fit-content',
     height: 'fit-content',
+    maxWidth: 440,
     backgroundColor: theme.colors.dark[6],
-    color: theme.colors.dark[0],
-    padding: 12,
+    color: '#ffffff',
+    padding: 8,
     borderRadius: theme.radius.sm,
     fontFamily: 'Roboto',
     boxShadow: theme.shadows.sm,
@@ -22,16 +23,19 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontWeight: 500,
     lineHeight: 'normal',
+    fontSize: 15.5,
   },
   description: {
-    fontSize: 12,
-    color: theme.colors.dark[2],
+    fontSize: 14.5,
+    fontWeight: 500,
+    color: '#ee8a08',
     fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
   descriptionOnly: {
-    fontSize: 14,
-    color: theme.colors.dark[2],
+    fontSize: 15.5,
+    fontWeight: 500,
+    color: '#ffffff',
     fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
@@ -106,13 +110,13 @@ const Notifications: React.FC = () => {
     if (!data.icon) {
       switch (data.type) {
         case 'error':
-          data.icon = 'circle-xmark';
+          data.icon = 'hexagon-xmark';
           break;
         case 'success':
-          data.icon = 'circle-check';
+          data.icon = 'shield-check';
           break;
         case 'warning':
-          data.icon = 'circle-exclamation';
+          data.icon = 'diamond-exclamation';
           break;
         default:
           data.icon = 'circle-info';
