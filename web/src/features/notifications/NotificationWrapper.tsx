@@ -28,7 +28,7 @@ const useStyles = createStyles((theme) => ({
   description: {
     fontSize: 14.5,
     fontWeight: 500,
-    color: '#ee8a08',
+    color: theme.colors.dark[2],
     fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
